@@ -123,15 +123,15 @@
         <div class="row mb-4 align-items-center">
           <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
             <h3 class="h3">My Project</h3>
-            <p>For my project, I would like to create <b>There-MAN</b>, your personal theremin instructor!</p>
-            <div class=""align-items-center">
-              <div>
-                <img src="images/theremin_gif.gif" alt="A gif of someone playing the theremin." class="img-fluid">
+            <p>For my project, I would like to create <b>Ther-e-MAN</b>, your personal theremin instructor!</p>
+            <div class="align-items-center">
+              <div class="row mx-auto" style="max-width: 50%;">
+                <img src="images/theremin_gif.gif" alt="A gif of someone playing the theremin." class="img-fluid" style="max-width: 100%;">
               </div>
             </div>
             <br>
             <p>The theremin is an electronic instrument invented in 1920 by Soviet physicist Lev Sergyevich Termen (anglocized Leon Theremin). It first spread to the US via a soviet propaganda tour but only entered widespread use forty years later, when American manufacturers began producing their own theremins. It produces a super unique sound, which I associate with alien movies and TV shows. </p>
-            <div class="auto-resizable-iframe">
+            <div class="auto-resizable-iframe" style="max-width: 50%">
               <div>
                 <iframe frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/cqOmfhmsRZw"></iframe>
               </div>
@@ -139,9 +139,9 @@
             <br>
             <h4 class="h4">How it Works</h4>
             <p>(Warning &#8212; I don't understand electronics YET, so read at your own risk). The theremin is made of two antennae &mdash; one which controls pitch, and another that controls volume. Each circut has two capacitors, one which oscilates at a consant frequency, and another which is formed between your hand and the antenna. This means that for each input you have two signals: one that's fixed relative to the ground (the fixed oscillator), and the other which varies based on your hand's proximity to the antenna (the variable oscillator). With this setup, we can do something called <a href="https://en.wikipedia.org/wiki/Heterodyne">Heterodyning</a>, which mixes two high-frequency signals to create a low-frequency output signal. That way, we can either use that analog signal to immediately play a sine wave of the given frequency, or we can send the signal to a computer for further processing.</p>
-            <img src="images/harrison_instructions.png" alt="A diagram of the theremin's circuitry." class="img-fluid"> 
-
-          </div>
+            <div class="row mx-auto" style="max-width: 50%;">
+              <img src="images/harrison_instructions.png" alt="A diagram of the theremin's circuitry." class="img-fluid" style="max-width: 100%;">
+            </div>
           <div class="col-md-1" data-aos="fade-up"></div>
         </div>
       </div>
@@ -149,19 +149,44 @@
       <div class="container">
         <div class="row mb-4 align-items-center">
           <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="h3">There-MAN</h3>
-            <p>(Working name &#8212; just now realizing this pun works better out loud than on paper). </p>
+            <h3 class="h3">Ther-e-MAN</h3>
+            <p>(Working name). </p>
             <p>As I see it, the modern theremin has two major problems:</p>
             <ul>
               <li>There is <span style="font-weight: bold;">no way</span> to tell which pitch you are playing without a reference or perfect pitch. This makes the process of sight reading, solo playing, and learning much more difficult.</li>
               <li>Though constant playing data is collected by the theremin, it's <span style="font-weight: bold;">all thrown away</span> immediately &mdash; there's no way to naturally learn about your playing with this information.</li>
             </ul>
-            <p>These two problems inspire my project. There-Man will be a fully functional theremin with tunable pitch, with two major alterations:</p>
+            <p>These two problems inspire my project. Ther-e-MAN will be a fully functional theremin with tunable pitch, with two (three) major alterations:</p>
             <ol>
-              <li>An LED strip will constantly map analog pitch signal to a correspinding color on an attached LED array, so that every C will correspond to red, and pitch will cause the color to continuously vary along the color wheel. (Optionally, if there's time, make the color tunable so you can choose your own set of colors to use).</li>
-              <li>All playing information will be fed via bluetooth or Wi-Fi to any device with the accompanying software, which will give real-time feedback about your playing. For example, given a reference key, it can tell you how many cents you deviate from the pitch center on average, and identify especially problematic intervals.</li>
-              <li>In the most ambitious form of this project, we could take any piece of music (say, written using MuseScore) and, adding only some basic metadata, have a score that you can 'play along' with, returning the number of correct notes, identifing problem sections, and possibly tracking some sort of cumulative score a-la Elo ratings.</li>
+              <li>An LED strip will constantly map analog pitch signal to a corresponding color on an attached LED array, so that every C will correspond to red, and pitch will cause the color to continuously vary along the color wheel. (Optionally, if there's time, make the color tunable so you can choose your own set of colors to use).
+              <br>
+              <div class="row mx-auto" style="max-width: 50%;">
+                <div class="col-md-6">
+                  <img src="images/color_wheel.png" alt="The Perceptual color wheel." class="img-fluid" style="max-width: 100%;">
+                </div>
+                <div class="col-md-6">
+                  <img src="images/pitch_wheel.png" alt="A western pitch wheel." class="img-fluid" style="max-width: 100%;">
+                </div>
+              </div></li>
+
+              <li>All playing information will be fed via bluetooth or Wi-Fi to any device with the accompanying software, which will give real-time feedback about your playing. For example, given a reference key, it can tell you how many cents you deviate from the pitch center on average, and identify especially problematic intervals.
+                <br>
+              <div class="row mx-auto" style="max-width: 50%;">
+                <img src="images/analysis.png" alt="A waveform with pitch analysis from Tonal Energy Tuner." class="img-fluid" style="max-width: 100%;">
+              </div>
+              </li>
+              <li>In the most ambitious form of this project, we could take any piece of music (say, written using MuseScore) and, adding only some basic metadata, have a score that you can 'play along' with, returning the number of correct notes, identifing problem sections, and possibly tracking some sort of cumulative score a-la Elo ratings.
+                <br>
+              <div class="row mx-auto" style="max-width: 50%;">
+                <img src="images/playing_along.gif" alt="An example gif of a pianist playing along with a digital score." class="img-fluid" style="max-width: 100%;">
+              </div>
+              </li>
             </ol>
+            
+            <!--Put two images side by side-->
+            
+
+
             <p>It seems as though building a simple homemade theremin isn't terribly difficult &#8212; at least it's familiar enough that there exist both <a href="https://www.youtube.com/watch?v=oRhO0MJIl58">YouTube</a> and <a href="https://www.wikihow.com/Make-a-Theremin">written</a> tutorials already online. However, I have no idea how feasible it is to add the corresponding color, and I also know nothing about relaying signals via wifi to software.</p>
             <p>It's important to me that this is a pretty modular project &#8212; there's a minimal set of features that I think are really important (a working theremin), others that are highly desirable (LED-mapping), and then a final set of features that I can make basically as complicated as I want (the corresponding teacher software). In all, I'm excited to begin working on the project!</p>
             <br>
