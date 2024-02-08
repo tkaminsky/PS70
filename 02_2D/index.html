@@ -108,7 +108,7 @@
           <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
             <h3 class="h3">Summary</h3>
             <p>Thank you for viewing my project update! This week, the major assignment was to make a custom box using the laser cutter, but we also were tasked with working through some fusion tutorials and modelling two objects.</p>
-            <p>Click any of the links below to navigate to each section of the assignment:</p>
+            <p>Scroll down or click any of the links below to navigate to each section of the assignment:</p>
             <ul>
               <li><a href="#switch">Fusion Model : Nintendo Switch</a></li>
               <li><a href="#wine_glass">Fusion Model : Wine Glass</a></li>
@@ -146,8 +146,8 @@
         <div class="row mb-4 align-items-center">
           <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
             <h3 class="h3" id="switch">Object 1 : Nintendo Switch</h3>
-            <p>For my first object, I wanted to model the Nintendo Switch console. It seemed to be mostly make of simple curves, but there were some tricky sections that took some time to work out.</p>
-            <p>The main body wasn't too difficult, being mostly rectangles and circle sectors. In fact, most of the body could be made by essentially extruding one sketch and then just filleting the edges:</p>
+            <p>For my first object, I wanted to model the Nintendo Switch console. It seemed to be mostly make of simple curves, but there were some tricky sections that took a bit to work out.</p>
+            <p>The main body wasn't too difficult, being mostly rectangles and circle sectors. In fact, most of it could be made by just extruding one sketch and then filleting the edges:</p>
             <div class="row mx-auto" style="max-width: 100%;">
               <div class="col-md-6">
                 <img src="images/tutorial/switch_body_diagram.png" alt="An example sketch from fusion 360." class="img-fluid" style="max-width: 100%;">
@@ -156,7 +156,7 @@
                 <img src="images/tutorial/extruded_switch_body.png" alt="An example object from fusion 360." class="img-fluid" style="max-width: 100%;">
               </div>
             </div>
-            <p>The real time sink was trying to figure out how to do the joysticks. I tried to use cuts of circles again, but I ended up just using a custom spline to make the top of the joystick, which is just a ball with a stick through it and a filleted disc on top:</p>
+            <p>The real time-sink was figuring out how to do the joysticks. I tried to use cuts of circles again, but I ended up just using a custom spline to make the top bit. The rest is just a ball with a stick through it and a filleted disc on top:</p>
             <div class="row mx-auto" style="max-width: 100%;">
               <div class="col-md-6">
                 <img src="images/tutorial/js_1.png" alt="An example sketch from fusion 360." class="img-fluid" style="max-width: 100%;">
@@ -165,7 +165,7 @@
                 <img src="images/tutorial/js_2.png" alt="An example object from fusion 360." class="img-fluid" style="max-width: 100%;">
               </div>
             </div>
-            <p>I think they ended up turning out pretty well! However, the other difficult component was a bit harder. I needed to create the curved L/R-bumpers on the back of the switch, but I had no idea how to make curved sketches to extrude. This ended up taking me down a few dead ends trying to learn how to project 2D sketch geometry onto curved surfaces (which you can apparently do, but can't extrude). Eventually, I realized you can literally just extrude from the surface directly. Problem (mostly) solved!</p>
+            <p>I think they ended up turning out pretty well! However, the other difficult component was a bit harder. I needed to create the curved L/R-bumpers on the back of the switch, but I had no idea how to make curved sketches to extrude. This ended up taking me down a few dead ends trying to learn how to project 2D sketch geometry onto curved surfaces (which you can apparently do, but you can't extrude from them). Eventually, I realized you can literally just extrude from the surface directly. Problem (mostly) solved!</p>
             <div class="row mx-auto" style="max-width: 100%;">
               <div class="col-md-6">
                 <img src="images/tutorial/bumper_diag.png" alt="An example sketch from fusion 360." class="img-fluid" style="max-width: 100%;">
@@ -202,8 +202,8 @@
         <div class="row mb-4 align-items-center">
           <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
             <h3 class="h3" id="wine_glass">Object 2 : Wine Glass</h3>
-            <p>After working on the Switch, I decided that I wanted to do more with organic shapes. It was hard to find objects that had a manageable number of organic shapes, but I eventually decided that a wine glass would be a good candidate.</p>
-            <p>At first I experimented with a couple of spline-based models, which ended up looking completely crazy. I think that I probably could've gotten a reasonable product with a bit more fiddling, but I became convinced that a simple approach was more likely to succeed. Here is an example bad wine glass (left two). Next I tried a simpler method, drawing straight lines where I wanted them and then just filletting the edges to get a more rounded shape. This was far more successful, though I was eyeballing it, so the proportions were a little strange (right two):</p>
+            <p>After working on the Switch, I decided that I wanted to do more with organic shapes. It was hard to find objects that weren't too complex, but I eventually decided that a wine glass would be a good candidate.</p>
+            <p>At first I experimented with a couple of spline-based models, which ended up looking completely crazy. I think that I probably could've gotten a reasonable product with a bit more fiddling, but I became convinced that a simple approach was more likely to succeed. Here is an example bad wine glass (left two). Next I tried a simpler method, drawing straight lines where I wanted them and then just filleting the edges to get a more rounded shape. This was far more successful, though I was eyeballing it, so the proportions were a little strange (right two):</p>
             <div class="row mx-auto" style="max-width: 100%;">
               <div class="col-md-3">
                 <img src="images/tutorial/bad_wine_1.png" alt="An example sketch from fusion 360." class="img-fluid" style="max-width: 100%;">
@@ -236,7 +236,7 @@
         <div class="row mb-4 align-items-center">
           <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
             <h3 class="h3" id="box">Laser-Cut Box</h3>
-            <p>For my box, I looked around a bit for other designs, but I eventually decided that (at least before the 3D printing unit) I wanted to keep the box construction pretty simple. I ended up going with the same form as the box from the tutorial, as far as construction goes.</p>
+            <p>For my box, I looked around a bit for other designs, but I eventually decided that (at least before the 3D printing unit) I wanted to keep the box construction pretty simple. I ended up going with the same form as the box from the tutorial for the basic design.</p>
             <p>Still, I wanted to do something to make the box my own! I eventually decided that I wanted the box to have a lid that felt semi-permiable, more like a screen than a real top. I was inspired by wooden screens that I remember seeing in churches, which I found out are apparently called <a href="https://en.wikipedia.org/wiki/Rood_screen#:~:text=The%20rood%20screen%20was%20a,pictures%20of%20saints%20and%20angels.">Rood Screens</a> (left and middle). While looking at these, I also ended up finding some examples of cool wood lattice work from the Islamic world, called <a href="https://en.wikipedia.org/wiki/Mashrabiya">Mashrabiya</a> (right), which seemed more like what I was going for.</p>
             <div class="row mx-auto" style="max-width: 100%;">
               <div class="col-md-4">
@@ -265,7 +265,16 @@
                 <img src="images/box/crazy_model.png" alt="An example sketch from fusion 360." class="img-fluid" style="max-width: 100%;">
               </div>
             </div>
-            <p>Printing mostly went off without a hitch. The top took like half an hour because it was so intricate, which I didn't entirely anticipate, so I'll be sure to block out more time if I'm ever making crazy designs again. I assembled with tape since the connections were a little loose, and I superglued some cardboard bars onto two sides so I could have a rest for my top when I wanted it to be closed. Here's the final product below:</p>
+            <p>Printing mostly went off without a hitch. The top took like half an hour because it was so intricate, which I didn't entirely anticipate, so I'll be sure to block out more time if I'm ever making crazy designs again. I assembled with tape since the connections were a little loose, and I superglued some cardboard bars onto two sides so I could have a rest for my top when I wanted it to be closed. Here are some pics from printing and assembly:</p>
+            <div class="row mx-auto" style="max-width: 100%;">
+              <div class="col-md-6">
+                <img src="images/box/printing.jpg" alt="An example sketch from fusion 360." class="img-fluid" style="max-width: 100%;">
+              </div>
+              <div class="col-md-6">
+                <img src="images/box/assembly.jpg" alt="An example object from fusion 360." class="img-fluid" style="max-width: 100%;">
+              </div>
+            </div>
+            <p>And here's my final box:</p>
             <div class="row mx-auto" style="max-width: 100%;">
               <div class="col-md-4">
                 <img src="images/box/box_view_1.jpg" alt="An example sketch from fusion 360." class="img-fluid" style="max-width: 100%;">
