@@ -13,7 +13,7 @@ import { getDatabase, ref, child, get } from "https://www.gstatic.com/firebasejs
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 var theremin_data = 0.0;
-var data_med = 400.0;
+var data_med = 300.0;
 var data_range = 800.0;
 const max_velocity = 800.0;
 var vel = 0.0;
