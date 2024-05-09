@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>PS70: TDK</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyPortfolio - v4.9.0
+  * Template URL: https://bootstrapmade.com/myportfolio-bootstrap-portfolio-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+     .auto-resizable-iframe {
+      max-width: 1000px;
+      margin: 0px auto;
+    }
+
+    .auto-resizable-iframe > div {
+      position: relative;
+      padding-bottom: 75%;
+      height: 0px;
+    }
+
+    .auto-resizable-iframe iframe {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Navbar ======= -->
+  <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
+    <div class="container py-2 py-md-5">
+      <div class="row align-items-start">
+        <div class="col-md-2">
+          <ul class="custom-menu">
+            <li class="active"><a href="../index.html">Projects</a></li>
+            <li><a href="../about.html">About Me</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 d-none d-md-block  mr-auto">
+          <div class="tweet d-flex">
+            <div>
+              <p><em>Welcome to my PS70 portfolio! I hope you enjoy learning more about my project for PS70: Intro to Digital Fabrication.</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <nav class="navbar navbar-light custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">PS70: Intro to Digital Fabrication</a>
+      <a href="#" class="burger" data-bs-toggle="collapse" data-bs-target="#main-navbar">
+        <span></span>
+      </a>
+    </div>
+  </nav>
+
+
+  <!-- ======= Main Content======= -->
+
+   <main id="main">
+
+
+    <section class="section">
+      <div class="container">
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-12" data-aos="fade-up">
+            <h2>The Making of Ther-e-Man</h2>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container">
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="h3">Early Prototypes</h3>
+            <p>When first setting out to make this project, I had very limited experience with electronics, and I had no idea how a theremin worked. However, I was curious about how we could wirelessly send continuous signals for musical purposes from the first weeks.</p>
+            <p>One early prototype, taken from the Arduino projects book, used a photoresistor to act as the sensor, but this completely failed as the photoresistor could not detect a wide-enough range of signals. Instead, I decided to use ultrasonic sensors to gather hand-distance information:</p>
+            <div class="align-items-center">
+              <div class="row mx-auto" style="max-width: 50%;">
+                <img src="images/theremin2_final_1.jpg" alt="A gif of someone playing the theremin." class="img-fluid" style="max-width: 100%;">
+              </div>
+            </div>
+            <br>
+            <p>Still, this had some pretty sizable issues. The biggest problem was that the signal was really choppy, and the hand had to be perfectly positioned to register. It was certainly far from a real theremin.</p>
+
+          </div>
+          <div class="col-md-1" data-aos="fade-up"></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="h3">Enter Capacitance</h3>
+            <p>Luckily, a few weeks later we would begin our lessons on electronic input devices, and capacitance featured prominently there. I still had no idea how a capacitor as I understood it could become a theremin, but it at least gave me a key word to start working with.</p>
+            <p>After a painful amount of googling that was ultimately fruitless, I decided to just try to make an antenna-shaped capacitor:</p>
+            <div class="align-items-center">
+              <div class="row mx-auto" style="max-width: 50%;">
+                <img src="images/antennae.jpeg" alt="A gif of someone playing the theremin." class="img-fluid" style="max-width: 100%;">
+              </div>
+            </div>
+            <p>Here, each colored wire corresponds to one plate of the capacitor. My hope was that the sensor would pick up my hand's proximity. It turned out it did, but it also unfortunately picked up a billion other things, rendering the signal basically incomprehensible.</p>
+            <h3 class="h3">MVP : Capacitive Slider</h3>
+            <p>I was still stumped on how to make a theremin by the time the MVP rolled around, so I decided to switch direction in case it never worked out. I ended up sort of riffing on a theremin, collecting a much more direct capacitive signal based on how much of two parallel plates overlap:</p>
+            <div class="align-items-center">
+              <div class="row mx-auto" style="max-width: 50%;">
+                <img src="images/slider.jpeg" alt="A gif of someone playing the theremin." class="img-fluid" style="max-width: 100%;">
+              </div>
+            </div>
+            <p>This wasn't terrible, but it was super sensitive to the pressure applied by the user, proximity to other objects, and so on. I certainly wasn't satisfied.</p>
+          <div class="col-md-1" data-aos="fade-up"></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="h3">Putting the Theremin Back in Ther-e-Man</h3>
+            <p>I eventually tried to explicitly copy successful theremin projects to get a working model, but this didn't work super well. I got the bill of materials and tried to create <a href="https://www.instructables.com/Make-Your-Own-Simple-Theremin/">This</a> DIY theremin, but it didn't work (probably due to some loose wires). However, before I started debugging, I realized that even the proper theremin actually sounds terrible, with an almost incomprehensible sound.</p>
+            <p>Eventually, with finals fast approaching, I decided to cut my losses on the electrical front and offload my knowledge to other, more informed people. I ordered this <a href="https://www.amazon.com/MicroKits-Electronics-Educational-Electronic-Breadboard/dp/B08BJGSYSN/ref=asc_df_B08BJGSYSN/?tag=hyprod-20&linkCode=df0&hvadid=693127141859&hvpos=&hvnetw=g&hvrand=778880337153813880&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9002012&hvtargid=pla-942503161082&psc=1&mcid=8287d1b9ce3d3949a590f1cfe712bcba&gad_source=4&gclid=Cj0KCQjw6PGxBhCVARIsAIumnWYvER3I6EK4KjhUFT15Amr40DJf8rVXnDXDL7qSxRB8lFYBtpRkdj0aAusSEALw_wcB">Theremin Kit</a> from a children's electronics website, hoping that it would be easy enough to alter.</p>
+            <div class="align-items-center">
+              <div class="row mx-auto" style="max-width: 50%;">
+                <img src="images/kit.png" alt="A gif of someone playing the theremin." class="img-fluid" style="max-width: 100%;">
+              </div>
+            </div>
+            <p>This worked out super well, and I had a working model within a day. I added a voltage divider and an ESP-32 Xiao to read the signal from the antenna, and I was starting to cook!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="h3">Transferring the Data</h3>
+            <p>I initially planned to send the information to my website by constantly updating a Firebase database. I actually implemented this <a href="https://github.com/tkaminsky/ps70-arduino-code/blob/main/theremin_firebase_transmit.ino">here</a> following a <a href="https://randomnerdtutorials.com/esp32-firebase-realtime-database/">Random Nerd Tutorials</a> tutorial, and it worked relatively well. Still, it would often stop recieving data for large chunks of time, ruining the real-time sensitivity of the theremin.</p> 
+            <p>I had better luck with a web server, implemented also following a <a href="https://randomnerdtutorials.com/esp32-web-server-arduino-ide/">RNT</a> tutorial. This ended up being tricky, and I ran into a pervasive error that I was being blocked by CORS. This was only fixed by installing a <a href="https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf">Chrome Extension</a> that explicitly gives users permission to open sites from other devices.</p>
+            <p>After that, information was flowing!</p>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="h3">Playing the Game</h3>
+            <p>I read about a JavaScript library called <a href="https://phaser.io/">Phaser</a> that seemed like a pretty easy way to create the kind of game I was going for. I followed some tutorials, and eventually found a Flappy Bird clone in Phaser by <a href="https://github.com/IgorRozani/flappy-bird">Igor Rozani</a> to serve as a structure for my game:</p>
+            <div class="align-items-center">
+              <div class="row mx-auto" style="max-width: 50%;">
+                <img src="images/flappy.png" alt="A gif of someone playing the theremin." class="img-fluid" style="max-width: 100%;">
+              </div>
+            </div>
+            <p>I changed the physics and controls of the sprites, and swapped the existing images and sprites for more galactic-themed options. The result looked like a pretty different game, despite being relatively similar to flappy bird:</p>
+            <div class="align-items-center">
+              <div class="row mx-auto" style="max-width: 50%;">
+                <img src="images/theremoon.png" alt="A gif of someone playing the theremin." class="img-fluid" style="max-width: 100%;">
+              </div>
+            <p>I liked how it looked! All that was left was improving the hardware</p>
+            <br>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="h3">Soldering and Laser-Cutting</h3>
+            <p>I wanted to make the theremin more secure, so I ended up soldering it onto a solderable breadboard:</p>
+            <div class="align-items-center">
+              <div class="row mx-auto" style="max-width: 50%;">
+                <img src="images/solder.jpeg" alt="A gif of someone playing the theremin." class="img-fluid" style="max-width: 100%;">
+              </div>
+            </div>
+            <p>Some of the connections were a bit shaky, so Bobby helped me fix them. Even then, some of the core components that I was afraid to solder down were connected by sockets, but these were so loose that they would often keep the circuit from completeing. I never solved this problem unfortunately.</p>
+            <p>Still, eventually I was able to get something working, so I mounted the breadboard to create a nice package:</p>
+            <div class="align-items-center">
+              <div class="row mx-auto" style="max-width: 50%;">
+                <img src="images/package.jpeg" alt="A gif of someone playing the theremin." class="img-fluid" style="max-width: 100%;">
+              </div>
+            </div>
+            <p>I liked how it looked! I just needed to put it in a box.</p>
+            <br>
+            <p>I created a very simple box design in Fusion consisting of a series of stacked layers of wood:</p>
+            <iframe src="https://gmail3844166.autodesk360.com/shares/public/SH512d4QTec90decfa6e106a757b135ba68b?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+            <!--Put two images side by side-->
+            <p>And I printed it out:</p>
+            <div class="align-items-center">
+              <div class="row mx-auto" style="max-width: 50%;">
+                <img src="images/printing.jpeg" alt="A gif of someone playing the theremin." class="img-fluid" style="max-width: 100%;">
+              </div>
+            </div>
+            <p>The final box was superglued together, and ended up working out really well!</p>
+            <div class="align-items-center">
+              <div class="row mx-auto" style="max-width: 50%;">
+                <img src="images/box_final.jpeg" alt="A gif of someone playing the theremin." class="img-fluid" style="max-width: 100%;">
+              </div>
+            </div>
+
+            <p>The rest is history. I think the project turned out really well! I hope you enjoyed reading. In short, as I said all the way back in week 2: "It seems as though building a simple homemade theremin isn't terribly difficult".</p>
+            <br>
+            <p>&mdash;Thomas</p>
+          </div>
+        </div>
+      </div>
+
+      
+
+    </section>
+
+
+  </main><!-- End #main -->
+
+
+  <!-- ======= Footer ======= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <p class="mb-1">Template Credit : Felicia Liang , PS70 Fall 2022</p>
+          </div>
+        <div class="col-sm-6 social text-md-end">
+          <a href="https://www.instagram.com/wanderies_/"><span class="bi bi-instagram"></span></a>
+          <a href="https://www.linkedin.com/in/feliciasliang/"><span class="bi bi-linkedin"></span></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
