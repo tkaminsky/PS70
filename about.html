@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>PS70: TDK</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyPortfolio - v4.9.0
+  * Template URL: https://bootstrapmade.com/myportfolio-bootstrap-portfolio-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+    * {box-sizing: border-box;}
+    body {font-family: Verdana, sans-serif;}
+    .mySlides {display: none;}
+    img {vertical-align: middle;}
+    
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+    
+    /* Caption text */
+    .text {
+      /*color: #f2f2f2; */
+      color: #000000;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+      background-color: #ffffff;
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    
+    /* The dots/bullets/indicators */
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .active {
+      background-color: #717171;
+    }
+
+    .auto-resizable-iframe {
+      max-width: 1000px;
+      margin: 0px auto;
+    }
+
+    .auto-resizable-iframe > div {
+      position: relative;
+      padding-bottom: 75%;
+      height: 0px;
+    }
+
+    .auto-resizable-iframe iframe {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+    }
+    
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+      animation-fill-mode: forwards; /* Add this line */
+
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+    
+  }
+      
+    }
+    
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .text {font-size: 11px}
+    }
+    </style>
+</head>
+
+<body>
+
+  <!-- ======= Navbar ======= -->
+  <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
+    <div class="container py-2 py-md-5">
+      <div class="row align-items-start">
+        <div class="col-md-2">
+          <ul class="custom-menu">
+            <li><a href="index.html">Projects</a></li>
+            <li class="active"><a href="about.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 d-none d-md-block  mr-auto">
+          <div class="tweet d-flex">
+            <div>
+              <p><em>Welcome to my PS70 portfolio! I hope you enjoy learning more about my project for PS70: Intro to Digital Fabrication.</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <nav class="navbar navbar-light custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">PS70: Intro to Digital Fabrication</a>
+      <a href="#" class="burger" data-bs-toggle="collapse" data-bs-target="#main-navbar">
+        <span></span>
+      </a>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <section class="section pb-5">
+      <div class="container">
+        <div class="row mb-5 align-items-end">
+          <div class="col-md-6" data-aos="fade-up">
+
+            <h2>About Me</h2>
+            <p class="mb-0">Hello! I'm Thomas, a senior at Harvard studying stats and math. 
+              I'm looking forward to learning more about electronics and digital fabrication this spring in PS70! Please enjoy this set of progress bars that I liked too much to remove from the template, though I don't fully understand their purpose.</p>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 ml-auto order-2" data-aos="fade-up">
+            <h3 class="h3 mb-4">Skills</h3>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <div class="d-flex mb-1">
+                  <strong>Enthusiasm! | 99%</strong>
+                </div>
+                <div class="progress custom-progress">
+                  <div class="progress-bar" role="progressbar" style="width: 99%" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <div class="d-flex mb-1">
+                  <strong>Math | 90%</strong>
+                </div>
+                <div class="progress custom-progress">
+                  <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <div class="d-flex mb-1">
+                  <strong>Programming | 75%</strong>
+                  <!-- <span class="ml-auto"> 75%</span> -->
+                </div>
+                <div class="progress custom-progress">
+                  <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <div class="d-flex mb-1">
+                  <strong>Documentation-Reading | 25%</strong>
+                </div>
+                <div class="progress custom-progress">
+                  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <div class="d-flex mb-1">
+                  <strong>UX/UI Design | 10%</strong>
+                </div>
+                <div class="progress custom-progress">
+                  <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <div class="d-flex mb-1">
+                  <strong>3D Modelling, Electronics, CNC milling, woodworking | 0%</strong>
+                </div>
+                <div class="progress custom-progress">
+                  <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-5 mb-3 mb-md-0" data-aos="fade-up">
+            <p><img src="images/profile_pic.jpg" alt="Image" class="img-fluid"></p>
+            <p></p>
+            
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="container">
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-12" data-aos="fade-up">
+            <h2>Biography</h2>
+            <p class="mb-0">I'm from Walla Walla, a (formerly small, now solidly mid-sized) town in southeastern Washington State. We're home to a few colleges, most notably Whitman, a growing wine country (producing incredible cabs and probably the best Syrahs in the country due to our renowned <a href="https://rocksdistrict.com/">Rocks District</a>), and a large agricultural sector, with our most famous product, the Walla Walla sweet onion, being the Washington State Vegetable (and the subject of one of the earliest trade partnerships negotiated by Trader Joe's, propelling the onion into superstardom overnight!).</p>
+            <br>
+            <p>When not digitally fabricating, I love music and walking around. I love music so much that I went to school for a bit in <a href="https://www.interlochen.org/arts-boarding-school">Northern Michigan</a> to do it full-time until the pandemic hit. To practice some HTML/CSS/JavaScript that I haven't been exposed to, I've included some media below on both of these themes.
+          </div>
+          <div class="col-md-1" data-aos="fade-up"></div>
+        </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-12" data-aos="fade-up">
+            <br>
+            <h3>Outside</h3>
+            Here is a slideshow of some of my favorite pictures from places I've been recently in Washington, Oregon, Minnesota, and New Hampshire!
+          </div>
+          <div class="col-md-1" data-aos="fade-up"></div>
+        </div>
+        </div>
+      </div>
+
+
+    <!---Slideshow from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_auto-->
+      <div class="container slideshow-container">
+
+        <div class="mySlides fade" data-aos="fade-up">
+          <div class="numbertext">1 / 20</div>
+          <img src="images/slideshow/01.jpg" style="width:100%">
+          <div class="text">The Blue Mountains, south of Walla Walla.</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 20</div>
+          <img src="images/slideshow/02.jpg" style="width:100%">
+          <div class="text">Mormon Grade, a popular country road named after its connection to the Mormon separatist commune, called the <a href="https://ww2020.net/wp-content/uploads/w.w.davies-brochure-2-28-15.pdf">Davies Community</a>.</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 20</div>
+          <img src="images/slideshow/03.JPG" style="width:100%">
+          <div class="text">Walla Walla was once the floor of a massive ocean, as evidenced by its rolling hills.</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 20</div>
+          <img src="images/slideshow/04.jpg" style="width:100%">
+          <div class="text">The sun setting near Horseshoe Bend, south of Walla Walla, in the Blue Mountain foothills.</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">5 / 20</div>
+          <img src="images/slideshow/17.jpg" style="width:100%">
+          <div class="text">Fellow Harvard Student Mira Becker taking pictures between the Twin Sisters in Wallula Gap, two enormous basalt columns which feature prominently in Cayuse legend.</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">6 / 20</div>
+          <img src="images/slideshow/05.jpg" style="width:100%">
+          <div class="text">Diablo Lake in North Cascades National Park, as seen from Sourdough Lookout Trail.</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext"> 7/ 20</div>
+          <img src="images/slideshow/09.jpg" style="width:100%">
+          <div class="text">
+              "Is anything burning? //
+
+              The sun itself! Dying /
+              Pooping out, exhausted /
+              Having produced brontosaurus, Heraclitus /
+              This rock, me, /
+              To no purpose /
+              I tell you anyway (as a kind of loving) . . ." 
+              &mdash;<a href="https://www.poetryfoundation.org/poems/50467/sourdough-mountain-lookout">Sourdough Mountain Lookout</a>, by Philip Whalen
+          </div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">8 / 20</div>
+          <img src="images/slideshow/06.jpg" style="width:100%">
+          <div class="text">North Bend, seen from Mount Si Trail (Big Si) &mdash; the most-travelled hike in Washington State.</div>
+        </div> 
+
+        <div class="mySlides fade">
+          <div class="numbertext">9 / 20</div>
+          <img src="images/slideshow/07.jpg" style="width:100%">
+          <div class="text">Lake Union seen on the fourth of July from Lake Union Park, in downtown Seattle.</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">10 / 20</div>
+          <img src="images/slideshow/08.jpg" style="width:100%">
+          <div class="text">Me, in front of Colchuck Lake, near Leavenworth, WA.</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">11 / 20</div>
+          <img src="images/slideshow/12.jpg" style="width:100%">
+          <div class="text">Lake Angeles, seen from the Klahhane Ridge Loop in Olympic National Park.</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">12 / 20</div>
+          <img src="images/slideshow/10.jpg" style="width:100%">
+          <div class="text">Me, once more in front of the Olympics in the Washington penninsula.</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">13 / 20</div>
+          <img src="images/slideshow/11.jpg" style="width:100%">
+          <div class="text">One of the Crystal Lakes in Mount Rainier National Park with the mountain itself peeking over the treetops.</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">14 / 20</div>
+          <img src="images/slideshow/13.jpg" style="width:100%">
+          <div class="text">The Haystack, viewed from Cannon Beach, Oregon.</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">15 / 20</div>
+          <img src="images/slideshow/14.jpg" style="width:100%">
+          <div class="text">The northern Oregon coastline as seen from atop the Great Dune in Pacific City.</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">16 / 20</div>
+          <img src="images/slideshow/15.jpg" style="width:100%">
+          <div class="text">The view from atop one of the hills in Mont-Orford National Park, near Montreal.</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">17 / 20</div>
+          <img src="images/slideshow/16.jpg" style="width:100%">
+          <div class="text">Some rocks near Star Lake, just south of Madison Spring Hut in the White Mountains.</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">18 / 20</div>
+          <img src="images/slideshow/18.jpg" style="width:100%">
+          <div class="text">On a HOC hike covering Mount Madison and Adams, again in the New Hampshire Whites.</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">19 / 20</div>
+          <img src="images/slideshow/20.jpg" style="width:100%">
+          <div class="text">The cliffs above Lake Michigan in Tettegouche state park, in northern Minnesota.</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">20 / 20</div>
+          <img src="images/slideshow/19.jpg" style="width:100%">
+          <div class="text">A Walla Walla sunset.</div>
+        </div>
+
+      </div>
+      <br>
+        
+      <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+      </div>
+      <br>
+      <div class="container">
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-12" data-aos="fade-up">
+            <h3>Music</h3>
+            <p class="mb-0">I play the flute and the piccolo. This has allowed me to got to a lot of cool places and play some really exciting music! I've included below a few samples of my (now pretty out-of-date) recordings.</p>
+            <br>
+            <p class=""mb-0>Here's my recording of the Nielsen Flute concerto, recorded in Walla Walla at St. Paul's Episcopal Church in the winter of 2021. This is one of the all-time classic flute pieces, and is played often for competitions and auditions due to its contrasting lyrical and highly technical sections.</p>
+            <br>
+            <div class="auto-resizable-iframe">
+              <div>
+                <iframe frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/CnO_wST6QxM"></iframe>
+              </div>
+            </div>
+            <br>
+            <p class="mb-0">This is Telemann's second fantasia, a Baroque piece written for solo flute (or recorder). Telemann wrote 12 of these solo flute works, and possibly wrote 12 more (or maybe his son or a colleague did). They're all split into (usually 4) movements, alternating fast and slow sections. They're a ton of fun to play, and I think they sort of form the core of the flute rep. I recorded this at Interlochen for some sort of competition, but I don't remember which.</p>
+            <br>
+            <div class="auto-resizable-iframe">
+              <div>
+                <iframe frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/Qs_pIz2j4KM"></iframe>
+              </div>
+            </div>
+          <div class="col-md-1" data-aos="fade-up"></div>
+
+          <br>
+          <p>Just to try one new HTML tag, I've also embedded a video from my (now defunct) practice account. This is a clip from the beginning of the Chaminade Concertino, which was perhaps the single most well-known solo flute piece when I was growing up due to popular recordings by James Galway and Jasmine Choi. It's one of the vanishingly few pre-21st-century flute pieces written by a woman, and was commissioned to serve as a contest piece for the Paris Conservatory's flute exam.</p>
+          <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/CKNrCkInvr6/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/CKNrCkInvr6/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/CKNrCkInvr6/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Thomas Kaminsky (@tommy_flutes)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+        </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-12" data-aos="fade-up">
+            <br>
+            <p>I hope you enjoyed visiting my website! Feel free to check out my <a href='index.html'>Projects</a> for more information about what I've been up to.</p>
+          </div>
+          <div class="col-md-1" data-aos="fade-up"></div>
+        </div>
+        </div>
+      </div>
+<script>
+  let slideIndex = 0;
+  let timer;
+
+  showSlides();
+
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    clearTimeout(timer); // Reset the timer
+    timer = setTimeout(showSlides, 5000); // Change slide every 5 seconds
+  }
+
+  // Add event listeners to dots
+  let dotElements = document.getElementsByClassName("dot");
+  for (let i = 0; i < dotElements.length; i++) {
+    dotElements[i].addEventListener("click", function() {
+      slideIndex = i;
+      clearTimeout(timer); // Reset the timer
+      showSlides();
+    });
+  }
+</script>
+
+  </main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <p class="mb-1">Template Credit : Felicia Liang , PS70 Fall 2022</p>
+          </div>
+        <div class="col-sm-6 social text-md-end">
+          <a href="https://www.instagram.com/wanderies_/"><span class="bi bi-instagram"></span></a>
+          <a href="https://www.linkedin.com/in/feliciasliang/"><span class="bi bi-linkedin"></span></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
