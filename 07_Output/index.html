@@ -113,7 +113,7 @@ href="../Prism/prism.css"
       <div class="container">
         <div class="row mb-4 align-items-center">
           <div class="col-md-12" data-aos="fade-up">
-            <h2>06 : Input & Output Devices</h2>
+            <h2>07 : Electronic Output Devices</h2>
           </div>
         </div>
       </div>
@@ -122,14 +122,10 @@ href="../Prism/prism.css"
       <div class="container">
         <div class="row mb-4 align-items-center">
           <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
-            <p>This week, I played around a bit with sensing and began to think more about how to make the theremin work with capacitors.</p>
+            <p>This week, I made a lot of progress with parts of my project that I feared would be most difficult. In particular, I focused on finding a working capacitive mechanism for providing a continuous frequency signal, and learning how to map such a signal into RGB such that the colors loop every octave. Navigate to each of these areas below:</p>
             <ul>
-                <li><a href="../notimplemented.html">3D Printing Extravaganza</a></li>
-                <li><a href="../notimplemented.html">Idea : Collapsable Wine Glass</a></li>
-                <li><a href="../notimplemented.html">Adventures in Photogrammetry : Meshroom</a></li>
-                <li><a href="../notimplemented.html">Project Update : Finalized Idea</a></li>
-                <li><a href="../notimplemented.html">Project Model</a></li>
-                <li><a href="../notimplemented.html">Bill of Materials</a></li>
+                <li><a href="#slide">Capacitive Slide</a></li>
+                <li><a href="#color">Mapping Pitch to RGB</a></li>
             </ul>
           </div>
           <div class="col-md-1" data-aos="fade-up"></div>
@@ -139,37 +135,275 @@ href="../Prism/prism.css"
       <div class="container">
         <div class="row mb-4 align-items-center">
           <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="h3" id="misc">Misc : Soldering and 3D Printing</h3>
+            <h3 class="h3" id="slide">Capacitive Slide</h3>
             <h5 class="h5"></h5>
-            <p>In lab, we were able to experiment with printing a tiny part (~5 min) on the 3D printers. I looked around Thingiverse for a bit for a cool-looking model, and eventually settled on this <a href="https://www.thingiverse.com/thing:5371468">infinity cube</a> by Eevee97. However, to make it print in 5 minutes, I just scaled it down to like 10% scale.</p>
+            <p>Last week, I was really struggling to figure out how the theremin produced its stable oscillating waves. I had built some capacitive antennae that I hoped would work for the sensors, but they proved to be far too finnicky for practical use:</p>
             <div class="row mx-auto" style="max-width: 100%;">
                 <div class="col-md-4">
-                  <img src="images/infinity_cube.png" alt="My first soldering job." class="img-fluid" style="max-width: 100%;">
+                  <img src="../06_input/images/theremin_In_action.jpeg" alt="My first soldering job." class="img-fluid" style="max-width: 100%;">
                 </div>
             </div>
-            <p>I thought that maybe there were 80/20 odds that scaling it down so much would really break something. Turns out, the odds were more like 100/0, and the result was basically a rectangle:</p>
+            <p>I spent a lot of this week trying to figure out better how the theremin works, but I was still lost. There were a lot of resources providing instructions, but I found them all way to vague to figure out.</p>
+            <p>Starting to fear that I wouldn't be able to get any theremin working, I decided to switch focus for my MVP towards getting any sort of signal from a sensor that you could 'play'. If all else fails, I can use this as the mechanism for my project instead of a real theremin.</p>
+            <p>After reading about how calipers basically work by precisely measuring changing capacitance as plates slide apart (though they're more complicated than what I'm doing), I thought it might be possible to read from two moving capacitors a slide-whistle signal. I quickly created a first mock-up, and was pleasantly surprised with the results!</p>
             <div class="row mx-auto" style="max-width: 100%;">
-                <div class="col-md-4">
-                  <img src="images/3d-print.jpg" alt="My first soldering job." class="img-fluid" style="max-width: 100%;">
-                </div>
-            </div>
-            <p>The moral of the story: you can't just rescale things whenever you want.</p>
+              <div class="col-md-4">
+                <img src="images/v1.jpeg" alt="My first soldering job." class="img-fluid" style="max-width: 100%;">
+              </div>
+          </div>
+          <p>I was able to consistently achieve continuous slides across pitches, rather than the jolty capacitance from last week. To calculate a signal, I used the following code: </p>
+          <pre>
+            <code class="language-clike">
+              long result_1;   //variable for the result of the tx_rx measurement.
+long result_2;
+float result;
+int analog_pin_1 = A3;
+int tx_pin_1 = 4;
+int tx_pin_2 = 7;
+int lightPin = 3;
+int analog_pin_2 = A1;
 
-            <h5 class="h5">Soldering</h5>
-            <p>I also ended up doing a little soldering. Initially I was trying to follow the Arduino theremin tutorial, and so I grabbed a part called a piezo that had two small wires at the end that wouldn't fit into the premade sockets. To fix this, I finally tried out soldering (I didn't get around to it last week), and was pleasently surprised that nothing went terribly wrong:</p>
-            <div class="row mx-auto" style="max-width: 100%;">
-                <div class="col-md-4">
-                  <img src="images/soldering.jpg" alt="My first soldering job." class="img-fluid" style="max-width: 100%;">
-                </div>
+int signal_1;
+int signal_2;
+int pitch_min = 130;
+int pitch_max = 1050;
+
+int max_1 = 0;
+int min_1 = 100000;
+int max_2 = 0;
+int min_2 = 100000;
+
+int get_rgb(float pitch) {
+  
+}
+
+void setup() {
+    pinMode(tx_pin_1, OUTPUT);      //Pin 4 provides the voltage step
+    pinMode(tx_pin_2, OUTPUT);
+    Serial.begin(9600);
+}
+
+void loop() {
+    result_1 = tx_rx(tx_pin_1, analog_pin_1);
+
+    if (result_1 > max_1){
+      max_1 = result_1;
+    } else if (result_1 < min_1) {
+      min_1 = result_1;
+    }
+
+    result_2 = tx_rx(tx_pin_2, analog_pin_2);
+
+    if (result_2 > max_2){
+      max_2 = result_2;
+    } else if (result_2 < min_2) {
+      min_2 = result_2;
+    }
+
+    signal_1 = map(result_1, min_1, max_1, 0, 255);
+    signal_2 = map(result_2, min_2, max_2, 0, 255);
+
+    // result = float(result_1 + result_2) / 2.0;
+    // result = float(result_1 - result_2);
+
+    // int size = map(result, 0, 100, 0, 255);
+    // analogWrite(lightPin, size);
+    Serial.print(signal_1);
+    Serial.print("   |   ");
+    Serial.println(result_1);
+    // Serial.println(result);
+}
+
+
+long tx_rx(int tx_pin, int analog_pin){         // Function to execute rx_tx algorithm and return a value
+                      // that depends on coupling of two electrodes.
+                      // Value returned is a long integer.
+  int read_high;
+  int read_low;
+  int diff;
+  long int sum;
+  int N_samples = 10;    // Number of samples to take.  Larger number slows it down, but reduces scatter.
+
+  sum = 0;
+
+  for (int i = 0; i < N_samples; i++){
+   digitalWrite(tx_pin,HIGH);              // Step the voltage high on conductor 1.
+   read_high = analogRead(analog_pin);     // Measure response of conductor 2.
+   delayMicroseconds(100);                 // Delay to reach steady state.
+   digitalWrite(tx_pin,LOW);               // Step the voltage to zero on conductor 1.
+   read_low = analogRead(analog_pin);      // Measure response of conductor 2.
+   diff = read_high - read_low;            // desired answer is the difference between high and low.
+   sum += diff;                            // Sums up N_samples of these measurements.
+ }
+  return sum;
+}   
+            </code>
+
+          </pre>
+          <p>Nevertheless, there were a few problems---most notably, changing the pressure pushing the two plates together, or changing where the hand was on the board, would completely change the capacitance. This made it really tough to tune it to correspond in a reasonable way with pitch, because it could be two orders of magnitude higher at one moment than another.</p>
+          
+          <p>To address this, I tried to create an enclosure that would force the two plates together and shift human input from diagonal onto the plate to just sliding parallel to it. This yielded the following model : </p>
+
+          <div class="row mx-auto" style="max-width: 100%;">
+            <div class="col-md-4">
+              <img src="images/top_plate.jpeg" alt="My first soldering job." class="img-fluid" style="max-width: 100%;">
             </div>
-            <p>However, though the soldering was a success, I had still made a critical mistake---it turns out that the "piezo" that I had found was completely unrelated to the piezo part that I actually needed, which was more like a speaker. Bobby helped me figure this out pretty fast, but now I just have this component connected to two wires, and I don't even know what the component is. You win some, you lose some.</p>
+        </div>
+        <div class="row mx-auto" style="max-width: 100%;">
+          <div class="col-md-4">
+            <img src="images/bottom_plate.jpeg" alt="My first soldering job." class="img-fluid" style="max-width: 100%;">
+          </div>
+      </div>
+
+      <div class="row mx-auto" style="max-width: 100%;">
+        <div class="col-md-4">
+          <img src="images/combined_mid.jpeg" alt="My first soldering job." class="img-fluid" style="max-width: 100%;">
+        </div>
+    </div>
+
+    <div class="row mx-auto" style="max-width: 100%;">
+      <div class="col-md-4">
+        <img src="images/combined_up.jpeg" alt="My first soldering job." class="img-fluid" style="max-width: 100%;">
+      </div>
+  </div>
           <div class="col-md-1" data-aos="fade-up"></div>
         </div>
       </div>
 
+      <p>This enclosure worked in that it made the sound more consistent, but I also made the gaps too small, so it was really hard to pull through. It actually ended up breaking on Thursday morning, so it might have to be back to the drawing board.</p>
+
 
     </section>
 
+    <div class="container">
+      <div class="row mb-4 align-items-center">
+        <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="h3" id="colors">Mapping Pitch to RGB</h3>
+          <p>My second task was to take the pitch data that I collected with my slider and map it to RGB in such a way that it wraps around every octave.</p>
+          <p>To do this, I just noted that an octave always corresponds to a power of two times a fundamental pitch, so the logarithm of the period is linear. Using that fact to map the frequencies to a [0,1) interval, I just piecewise defined the color shift around the circle from 0 to 1. This yielded the following code:</p>
+          <pre>
+            <code class="language-clike">
+              #include "math.h"
+// float middle_c = log(261.626);
+float middle_c = log(8.176);
+
+int r;
+int g;
+int b;
+int rgb;
+int rgb_read[] = {0, 0, 0};
+int r_read;
+int g_read;
+int b_read;
+float multiplier = 1.05946309436;
+
+long float_map(float x, float in_min, float in_max, float out_min, float out_max)
+{
+  return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+}
+
+int get_rgb(int pitch, int *rgb) {
+  float log_pitch = log(double(pitch)) / middle_c;
+  int nearest_int = int(log_pitch);
+  log_pitch = (log_pitch - nearest_int) * 6;
+  // Serial.print(log_pitch);
+  // log_pitch = fmod(log_pitch, middle_c) / middle_c * 6;
+  Serial.println(log_pitch);
+  // Serial.print(nearest_int);
+
+  if (log_pitch < 1) {
+    r = 255;
+    g = int(float_map(log_pitch, 0, 1, 0, 255));
+    b = 0;
+  } else if (log_pitch < 2) {
+    r = int(float_map(log_pitch, 1, 2, 255, 0));
+    g = 255;
+    b - 0;
+  } else if (log_pitch < 3) {
+    r = 0;
+    g = 255;
+    b = int(float_map(log_pitch, 2, 3, 0, 255));
+  } else if (log_pitch < 4) {
+    r = 0;
+    g = int(float_map(log_pitch, 3, 4, 255, 0));
+    b = 255;
+  } else if (log_pitch < 5) {
+    r = int(float_map(log_pitch, 4, 5, 0, 255));
+    g = 0;
+    b = 255;
+  } else {
+    r = 255;
+    g = 0;
+    b = int(float_map(log_pitch, 5, 6, 255, 0));
+  }
+  rgb[0] = r;
+  rgb[1] = g;
+  rgb[2] = b;
+  // return rgb;
+}
+
+int r_pin = 10;
+int g_pin = 9;
+int b_pin = 11;
+int speakerPin = 5;
+
+int pitch = 523.251;
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  get_rgb(pitch, rgb_read);
+  // r_read = rgb_read / 1000000;
+  // g_read = (rgb_read % 1000000) / 1000;
+  // b_read = (rgb_read / 1000);
+  // Serial.print(rgb_read[0]);
+  // Serial.print("   |   ");
+  // Serial.print(rgb_read[1]);
+  // Serial.print("   |   ");
+  // Serial.println(rgb_read[2]);
+
+  analogWrite(r_pin, rgb_read[0]);
+  analogWrite(g_pin, rgb_read[1]);
+  analogWrite(b_pin, rgb_read[2]);
+
+  tone(speakerPin, pitch);
+  // Serial.print(r_read);
+  // Serial.print("   |   ");
+  // Serial.print(g_read);
+  // Serial.print("   |   ");
+  // Serial.println(b_read);
+  pitch *= multiplier;
+  if (pitch > 1046.502) {
+    multiplier = 0.943874312682;
+  }
+  if (pitch < 130.813) {
+    multiplier = 1.05946309436;
+  }
+  delay(200);
+}
+              </code> 
+          </pre>
+          <br>
+          <br>
+          <p></p>
+
+        <div class="col-md-1" data-aos="fade-up"></div>
+      </div>
+    </div>
+
+    <p>The result was pretty cool! We see that the lights do indeed oscillate between all the colors:</p>
+
+    <div class="auto-resizable-iframe">
+      <div>
+        <iframe frameborder="0" allowfullscreen="" src="images/led_moving.mp4" autoplay="false"></iframe>
+      </div>
+    </div>
+
+    <p>Overall, I think I gained a lot of insight about what does and doesn't work for these theremin-like projects! I'm thinking it might be good to 3D print a more rigid part for the capacitive sensor, so that we can both maintain a strict distance between the plates without making it too tight.</p>
 
   </main><!-- End #main -->
 

@@ -169,7 +169,11 @@
             <p>A proper theremin requires two precise technical components. First, it turns out that when your hand is by an antenna which is part of a particular circuit, it causes electricity in that circuit to oscillate at a super high frequency. We want to somehow use this signal to get a low-frequency (audible) pitch. To do this, the theremin has a fixed oscillator that's always at the same high frequency, and subtracting it from the antenna signal causes a lower-frequency wave to result due to destructive interference. This is exactly what a radio does in your car when you change channels---you 'tune' the fixed oscillator to be close to the wavelenth of your preferred radio channel, so it can get an audible frequency out at the end.</p>
             <p>Second, you need to be able to convert this oscillation into a directive for the speaker to play the desired pitch. In my project, both of these components are abstracted to generic HETERODYNE and ASSEMBLE modules. The complete circuit is below:</p>
             <!--Put two images side by side-->
+
+            <br>
           
+            <br>
+            <p>With the signal collected by my ESP-32, I post the information to a webpage that can be accessed by anyone on the same network. With this, a page on my website running a space-themed arcade game constantly updates the vertical velocity of the protagonist sprite based on its most recent reading from the theremin.</p>
             <br>
             <p>&mdash;Thomas</p>
           </div>
