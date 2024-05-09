@@ -1,16 +1,16 @@
 {
-    "short_name": "Flappy Bird",
-    "name": "Flappy Bird",
+    "short_name": "Ther-e-Moon",
+    "name": "Starship Ther-e-Moon",
     "icons": [
       {
-        "src": "img/favicon.png",
+        "src": "assets/favicon.png",
         "type": "image/png",
         "sizes": "48x48"
       }
     ],
     "start_url": "/",
     "display": "standalone",
-    "description":"Flappy Bird in Phaser 3",
+    "description":"Ther-e-Moon in Phaser 3",
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
     "scope": "/"
