@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>PS70: TDK</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyPortfolio - v4.9.0
+  * Template URL: https://bootstrapmade.com/myportfolio-bootstrap-portfolio-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+     .auto-resizable-iframe {
+      max-width: 1000px;
+      margin: 0px auto;
+    }
+
+    .auto-resizable-iframe > div {
+      position: relative;
+      padding-bottom: 75%;
+      height: 0px;
+    }
+
+    .auto-resizable-iframe iframe {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Navbar ======= -->
+  <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
+    <div class="container py-2 py-md-5">
+      <div class="row align-items-start">
+        <div class="col-md-2">
+          <ul class="custom-menu">
+            <li class="active"><a href="../index.html">Projects</a></li>
+            <li><a href="../about.html">About Me</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 d-none d-md-block  mr-auto">
+          <div class="tweet d-flex">
+            <div>
+              <p><em>Welcome to my PS70 portfolio! I hope you enjoy learning more about my project for PS70: Intro to Digital Fabrication.</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <nav class="navbar navbar-light custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">PS70: Intro to Digital Fabrication</a>
+      <a href="#" class="burger" data-bs-toggle="collapse" data-bs-target="#main-navbar">
+        <span></span>
+      </a>
+    </div>
+  </nav>
+
+
+  <!-- ======= Main Content======= -->
+
+   <main id="main">
+
+
+    <section class="section">
+      <div class="container">
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-12" data-aos="fade-up">
+            <h2>03: Hand Tools and Fabrication</h2>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container">
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
+            <p>This week, I experimented a lot with assemblies in Fusion. What I thought would be a pretty easy part of the project turned out to take a long time, and so I sort of fell into a rabbit hole. Click one of the links below to see a recap of this week's assignment:</p>
+            <ul>
+                <li><a href="#broccoli_1">More Fusion Broccoli</a></li>
+                <li><a href="#broccoli_2">ALLERGIC TO FUSION BROCCOLI!!!</a></li>
+                <li><a href="#project">I try to make a Rack and Pinion</a></li>
+            </ul>
+          </div>
+          <div class="col-md-1" data-aos="fade-up"></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="h3" id="broccoli_1">More Fusion Broccoli</h3>
+            <p>My initial hope was to design a box with two mountains in the foreground which would horizontally slide out of the way to reveal a scene in the back, like a sunrise:</p>
+            <div class="row mx-auto" style="max-width: 100%;">
+                <div class="col-md-4">
+                  <img src="images/idea.jpg" alt="My project idea." class="img-fluid" style="max-width: 100%;">
+                </div>
+            </div>
+            <p>This would require translating rotational motion to cyclic horizontal movement, so I decided to use the rack-and-pinion mechanism from one of the course pages as the base for my design. However, I had no idea how to model this, so I spent a while working through Fusion tutorials on rendering motion. Here are some results below:</p>
+            <div class="row mx-auto" style="max-width: 100%;">
+                <div class="col-md-6">
+                  <img src="images/Planet_gear.gif" alt="A planet gear." class="img-fluid" style="max-width: 100%;">
+                </div>
+                <div class="col-md-6">
+                    <img src="images/Gear_Basis_1.gif" alt="A gear sliding across a rack." class="img-fluid" style="max-width: 100%;">
+                  </div>
+            </div>
+            <p>These mostly went off without a hitch, so I decided to start trying to model the rack and pinion itself. Little did I know, this would not be so simple.</p>
+          </div>
+          <div class="col-md-1" data-aos="fade-up"></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="h3" id="broccoli_2">DEADLY FUSION BROCCOLI ALLERGY ACQUIRED</h3>
+            <p>As I tried to model a simple rack and pinion, I began to run into considerable issues. While it was relatively simple to model the relationship between the joints themselves, and to make the gear spin relative to a joint angle, it was incredibly difficult to get the gear to spin with the revolving joint along a horizontal rack. I attempted to make this work using motion links, motion studies, and by manually moving relative joints. Eventually, I tried to enable collision detection to emperically handle the movement, but this caused so much lag that Fusion was basically unusable.</p>''
+            <div class="row mx-auto" style="max-width: 100%;">
+                <div class="col-md-4">
+                  <img src="images/Gear_Error_1.gif" alt="An example mistake." class="img-fluid" style="max-width: 100%;">
+                </div>
+            </div>
+            <p>Eventually, I just gave up trying to model the kinematics, deciding instead to take a faster approach and just get some parts printed.</p>
+        </div>
+          <div class="col-md-1" data-aos="fade-up"></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="h3" id="project">Rack-and-Pinion Mechanism</h3>
+            <p>By this point, my goal was just to get something that moved. I grabbed a gear and rack design from a Fusion library, printed it out with some cardboard rods, and then tried to haphazardly assemble something usable:</p>
+            <div class="row mx-auto" style="max-width: 100%;">
+                <div class="col-md-4">
+                  <img src="images/gear_proto_1.jpg" alt="My first prototype." class="img-fluid" style="max-width: 100%;">
+                </div>
+            </div>
+            <p>The result was rough, and had some obvious defects that made it not movable (like the small rod being longer than its base, causing it to hit the table at each revolution), but it finally gave me a sense of what the problems were and where I needed to proceed. I realized that I'd have to be more cognizant of the depth of each component, because the first model didn't account for, among other things, the size of screwheads.</p>
+            <p>I got a slightly better idea of what I was looking for, and so I built a truer-to-life mockup:</p>
+            <div class="row mx-auto" style="max-width: 100%;">
+                <div class="col-md-4">
+                  <img src="images/prototype.png" alt="My second prototype." class="img-fluid" style="max-width: 100%;">
+                </div>
+            </div>
+            <p>Still, I was afraid that some unanticipated mistake would cause the thickness to be off, and I was running out of time to complete the project, so I decided to just take the components I thought I'd need and print a few copies of them at the laser cutter:</p>
+            <div class="row mx-auto" style="max-width: 100%;">
+                <div class="col-md-4">
+                  <img src="images/parts.png" alt="My second prototype." class="img-fluid" style="max-width: 100%;">
+                </div>
+            </div>
+            <p>This rough approach sort of worked, and finally I was able to get a gear that (mostly) moved. I didn't have time to figure out how to secure a second moving pinon to the top, but I got a video of the machine in action:</p>
+            <div class="auto-resizable-iframe">
+                <div>
+                  <iframe frameborder="0" allowfullscreen="" src="images/final_gear_vid.mp4"></iframe>
+                </div>
+              </div>
+              <br>
+              <p>It's definitely not perfect, but it was exciting to get a few parts out there. That said, there remain some persistent problems. Most significantly, I couldn't find a secure way to attach the first joint to the motor, so it had a tendency to fall off randomly:</p><div class="auto-resizable-iframe">
+                <div>
+                  <iframe frameborder="0" allowfullscreen="" src="images/gear_breaking.mp4"></iframe>
+                </div>
+              </div>
+              <br>
+              <p>In any case, that's assignment 3 wrapped up. Definitely a more difficult one for me, but I'm excited to try for something a little more attainable in future weeks.</p>
+              <br>
+            <p>&mdash;Thomas</p>
+          <div class="col-md-1" data-aos="fade-up"></div>
+        </div>
+      </div>
+
+
+    </section>
+
+
+  </main><!-- End #main -->
+
+
+  <!-- ======= Footer ======= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <p class="mb-1">Template Credit : Felicia Liang , PS70 Fall 2022</p>
+          </div>
+        <div class="col-sm-6 social text-md-end">
+          <a href="https://www.instagram.com/wanderies_/"><span class="bi bi-instagram"></span></a>
+          <a href="https://www.linkedin.com/in/feliciasliang/"><span class="bi bi-linkedin"></span></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
